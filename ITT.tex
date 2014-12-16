@@ -9,14 +9,14 @@
 
 % add names here!
 \author[1]{Tom Crick}
-% \author[2]{Person 2}
+\author[2]{Neil P. Chue Hong}
 % \author[2]{Person 3...}
 \affil[1]{Department of Computing \& Information Systems, Cardiff
   Metropolitan University}
-% \affil[2]{Org2}
+  \affil[2]{Software Sustainability Institute, University of Edinburgh}
 % \affil[3]{Org3}
 \affil[1]{\protect\url{tcrick@cardiffmet.ac.uk}}
-% \affil[2]{\protect\url{email2}}
+\affil[2]{\protect\url{N.ChueHong@software.ac.uk}}
 % \affil[3]{\protect\url{email3}}
 
 \renewcommand\Authands{ and }
@@ -34,6 +34,42 @@ Guidelines and top tips for doing irreproducible research.
 % c.800 words?
 \section{Introduction}
 Add stuff here...
+
+% General idea
+% Come up with a paper on Irreproducibility Top Tips
+% Use specific personal examples from the authors to back each tip up
+
+% This is the list we came up with at the workshop
+\begin{enumerate}
+\item implement everything yourself / don't reuse existing, well tested code wherever possible
+\item  don't share anything
+\ don't make it clear what irreproducibility means in your context / domain
+\item don't make it clear where your method / approximations cannot be / should not be used
+\item don't publish your source code, or your implementation
+\item  define custom benchmarks
+\item  don't describe your experimental setup
+\item  give a vague methodology
+\item  data formats are boring
+\item  use magic numbers everywhere
+\item  miss out key parts / fudgy workflow
+\item  don't share the raw data you used to build everything
+\item  define your own data formats, preferably in binary, mont human or machine readable
+\end{enumerate}
+
+% Other questions that came up
+
+Are the trustable minimal information for recomputability  different or overlapping for different domains?
+\begin{itemize}
+\item in AI alone very different
+\item require publishing of algorithm and implementation
+\item what stepping of the memory controller in systems domain
+\end{itemize}
+
+Is there a Dublin Core - or a set of principles - that we can agree for recomputability?
+
+What about a paper which is essentially theoretical but complex, and an implementation is included to show that it is possible to implement it. Should that implementation be reproducible? Arguably not.
+
+
 
 %\bibliographystyle{unsrt}
 %\bibliography{ITT}
