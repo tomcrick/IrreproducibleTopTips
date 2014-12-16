@@ -3,20 +3,23 @@
 \usepackage{url}
 \usepackage{paralist}
 \usepackage{authblk}
-\usepackage[pdftex,colorlinks=true,hyperfootnotes=false]{hyperref}
+\usepackage[colorlinks=true,hyperfootnotes=false]{hyperref}
 
 \title{Top Tips for Irreproducible Research}
 
-% add names here!
+% add names here! alphabetical?
 \author[1]{Tom Crick}
 \author[2]{Neil P. Chue Hong}
+\author[3]{Lars Kotthoff}
 % \author[2]{Person 3...}
 \affil[1]{Department of Computing \& Information Systems, Cardiff
   Metropolitan University}
   \affil[2]{Software Sustainability Institute, University of Edinburgh}
+\affil[3]{Insight Centre for Data Analytics, University College Cork}
 % \affil[3]{Org3}
 \affil[1]{\protect\url{tcrick@cardiffmet.ac.uk}}
 \affil[2]{\protect\url{N.ChueHong@software.ac.uk}}
+\affil[3]{\protect\url{lars.kotthoff@insight-centre.org}}
 % \affil[3]{\protect\url{email3}}
 
 \renewcommand\Authands{ and }
@@ -54,6 +57,20 @@ Add stuff here...
 \item  miss out key parts / fudgy workflow
 \item  don't share the raw data you used to build everything
 \item  define your own data formats, preferably in binary, mont human or machine readable
+\end{enumerate}
+
+Need to distil those down to probably not more than 5 points -- here's Lars'
+attempt:
+\begin{enumerate}
+\item Pseudo-code is a great way of communicating ideas quickly and clearly.
+\item Don't share your implementation, you only make it easier for other people
+to scoop your ideas.
+\item People are interested in the science, not the experimental setup, so don't
+describe it.
+\item You're \emph{the} expert in the domain, only you can define what
+algorithms and data to run experiments with.
+\item Any limitations of the method and approximation will be obvious to the
+careful reader, no need to waste space on making them explicit.
 \end{enumerate}
 
 % Other questions that came up
