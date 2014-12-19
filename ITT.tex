@@ -45,6 +45,7 @@ Add stuff here...
 % Come up with a paper on Irreproducibility Top Tips
 % Use specific personal examples from the authors to back each tip up
 
+\section{Workshop List}
 % This is the list we came up with at the workshop
 \begin{enumerate}
 \item implement everything yourself / don't reuse existing, well tested code wherever possible
@@ -65,6 +66,39 @@ Add stuff here...
 \item it's only necessary that your code build and run on one physical computer on one date in history. 
 \end{enumerate}
 
+\section{Ian attempt at April Fool version}
+
+We have noticed a number of guides being published on how to make research reproducible. However, we have seen very little published on how to make research \emph{irreproducible}.  Irreproducibility is the default setting for all of science, and irreproducible research is particularly common in computational science.  The study of making your work irreproducible without reviewers complaining is a much neglected area. We feel therefore that by giving our top tips on irreproducibility, we will be filling a much needed gap in the literature.
+%\footnote{Filling a much needed gap is a standard joke.} 
+By following our tips you can ensure that if you work is wrong, nobody can find it out, while if it's right you will make everyone else do significantly more work than you to build on it. In either case you are the beneficiary.
+
+Our most vital tip is deceptively but beautifully simple. To ensure irreproducibility of your work, make sure that you cannot reproduce it yourself. If you were able to reproduce it, there would always be the danger of somebody else being able to do exactly the same as you. Much else follows from this. For example, complete confidence in your own inability to reproduce work saves tedious time revising your work on advice from reviewers: if you can't browbeat the editor into accepting it as is, you can resubmit elsewhere. A major advantage of this key insight is that no strict discipline is required to ensure self-irreproducibility: in our experience, irreproducibility can happily occur after only the tiniest amount of carelessness is necessary at one of any number of stages.
+
+There is an unfortunate convention in science that research should pretend to be reproducible. The remainder of our top tips will help you salve the conscience of reviewers still bound by this fussy conventionality, enabling them to enthusiastically recommend acceptance of your irreproducible work. 
+
+\begin{enumerate}
+\item Pseudo-code is a great way of communicating ideas quickly and clearly while giving readers no chance to understand the subtle implementation details that make it work. 
+\item Don't share your implementation. Doing so  only makes it easier for other people
+to scoop your ideas, understand why your code actually works instead of why you say it does, or worst of all to 
+understand that your code doesn't work at all. 
+\item People are interested in the science, not the experimental setup, so don't
+describe it.  If necessary, camouflage this absence with brief details of insignificant aspects of your methodology.
+\item You're \emph{the} expert in the domain, only you can define what
+algorithms and data to run experiments with. In the unhappy circumstance that your methods do not do well on standard benchmarks, you should
+create your own benchmarks and use those but preferably not make them available to others.
+\item Any limitations of your methods or proofs will be obvious to the
+careful reader, so there is no need to waste space on making them explicit.\footnote{Space saved in this way can be used to cite the critical papers in the field, i.e. those papers that will increment potential reviewers' h-index.}  However much work it takes colleagues to fill in the gaps, you will still get the credit if you just say you have amazing experiments or proofs. 
+After all, "Fermat's Last Theorem" is still known by that name even though somebody else proved it.
+\end{enumerate}
+
+We leave you with a simple postulate: that an experiment that is irreproducible is exactly equivalent to an experiment that was never carried out at all. The happy consequences of this postulate for experts in irreproducibility will be published elsewhere. 
+
+
+% It has not escaped our notice that this specific equlvalence we have postulated immediately suggests a possible mechanism for greatly increasing the amount of scientific material.
+% Cf Crick and Watson DNA paper: "It has not escaped our notice that the specific pairing we have postulated immediately suggests a possible copying mechanism for the genetic material."
+
+
+\section{Lars distillation}
 Need to distil those down to probably not more than 5 points -- here's Lars'
 attempt:
 \begin{enumerate}
@@ -81,6 +115,8 @@ careful reader, no need to waste space on making them explicit (TC:
 quote Fermat, save space, only write stuff in the margins and obliquely
 refer to amazing proofs).
 \end{enumerate}
+
+\section{Notes}
 
 % Other questions that came up
 
