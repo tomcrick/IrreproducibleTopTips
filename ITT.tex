@@ -5,7 +5,7 @@
 \usepackage{authblk}
 \usepackage[colorlinks=true,hyperfootnotes=false]{hyperref}
 
-\title{Top Tips for Irreproducible Research}
+\title{How to Make Your Research Irreproducible}
 
 % add names here! alphabetical?
 \author[1]{Tom Crick}
@@ -33,17 +33,13 @@
 \begin{document}
 \maketitle
 
-\begin{abstract}
-Guidelines and top tips for doing irreproducible research.
-\end{abstract}
-
 % c.800 words?
-\section{Introduction}
-Add stuff here...
-
 % General idea
 % Come up with a paper on Irreproducibility Top Tips
 % Use specific personal examples from the authors to back each tip up
+\begin{abstract}
+Guidelines and top tips for doing irreproducible research.
+\end{abstract}
 
 \section{Workshop List}
 % This is the list we came up with at the workshop
@@ -66,7 +62,25 @@ Add stuff here...
 \item it's only necessary that your code build and run on one physical computer on one date in history. 
 \end{enumerate}
 
-\section{Ian attempt at April Fool version}
+\section{Lars distillation}
+Need to distil those down to probably not more than 5 points -- here's Lars'
+attempt:
+\begin{enumerate}
+\item Pseudo-code is a great way of communicating ideas quickly and clearly.
+\item Don't share your implementation, you only make it easier for other people
+to scoop your ideas.
+\item People are interested in the science, not the experimental setup, so don't
+describe it.
+\item You're \emph{the} expert in the domain, only you can define what
+algorithms and data to run experiments with. (TC: Thus, you should
+create your own benchmarks and use those)
+\item Any limitations of the method and approximation will be obvious to the
+careful reader, no need to waste space on making them explicit (TC:
+quote Fermat, save space, only write stuff in the margins and obliquely
+refer to amazing proofs).
+\end{enumerate}
+
+\section{Ian's attempt at an April Fool's version}
 
 We have noticed a number of guides being published on how to make research reproducible. However, we have seen very little published on how to make research \emph{irreproducible}.  Irreproducibility is the default setting for all of science, and irreproducible research is particularly common in computational science.  The study of making your work irreproducible without reviewers complaining is a much neglected area. We feel therefore that by giving our top tips on irreproducibility, we will be filling a much needed gap in the literature.
 %\footnote{Filling a much needed gap is a standard joke.} 
@@ -97,26 +111,76 @@ We leave you with a simple postulate: that an experiment that is irreproducible 
 % It has not escaped our notice that this specific equlvalence we have postulated immediately suggests a possible mechanism for greatly increasing the amount of scientific material.
 % Cf Crick and Watson DNA paper: "It has not escaped our notice that the specific pairing we have postulated immediately suggests a possible copying mechanism for the genetic material."
 
+\section{Tom's attempt at a New Year version}
 
-\section{Lars distillation}
-Need to distil those down to probably not more than 5 points -- here's Lars'
-attempt:
+We have noticed a number of manifestos, guides and top tips on how to
+make research
+reproducible~\cite{barnes:2010,morin-et-al:2012,sandve-et-al:2013,wilson-et-al:2014,crick-et-al_recomp2014}.
+However, we have seen very little published on how to make research
+\emph{irreproducible}.  Irreproducibility is the default setting for
+all of science, and irreproducible research is particularly common
+across the computational sciences.  The study of making your work
+irreproducible without reviewers complaining is a much neglected
+area. We feel therefore that by encapsulating our top tips on
+irreproducibility, we will be filling a much needed gap in the domain
+literature. By following our tips you can ensure that if you work is
+wrong, nobody can find it out; while if it's right you will make
+everyone else do disproportionately more work than you to build upon
+it. In either case you are the beneficiary. {\textbf{Let's make 2015
+the year of irreproducible research}}.
+
+Our most important tip is deceptively but beautifully simple. To ensure
+irreproducibility of your work, make sure that you cannot reproduce it
+yourself. If you were able to reproduce it, there would always be the
+danger of somebody else being able to do exactly the same as you. Much
+else follows from this. For example, complete confidence in your own
+inability to reproduce work saves tedious time revising your work on
+advice from reviewers: if you can't browbeat the editor into accepting
+it as is, you can always resubmit elsewhere. A major advantage of this key
+insight is that no strict discipline is required to ensure
+self-irreproducibility: in our experience, irreproducibility can
+happily occur after only the tiniest amount of carelessness is
+necessary at one of any number of stages.
+
+There is an unfortunate convention in science that research should
+pretend to be reproducible. The remainder of our top tips will help
+you salve the conscience of reviewers still bound by this fussy
+conventionality, enabling them to enthusiastically recommend
+acceptance of your irreproducible work.
+
 \begin{enumerate}
-\item Pseudo-code is a great way of communicating ideas quickly and clearly.
-\item Don't share your implementation, you only make it easier for other people
-to scoop your ideas.
+\item Pseudo-code is a great way of communicating ideas quickly and clearly while giving readers no chance to understand the subtle implementation details that make it work. 
+\item Don't share your implementation. Doing so only makes it easier for other people
+to scoop your ideas, understand why your code actually works instead of why you say it does, or worst of all to 
+understand that your code doesn't work at all. 
 \item People are interested in the science, not the experimental setup, so don't
-describe it.
+describe it.  If necessary, camouflage this absence with brief, high-level details of insignificant aspects of your methodology.
 \item You're \emph{the} expert in the domain, only you can define what
-algorithms and data to run experiments with. (TC: Thus, you should
-create your own benchmarks and use those)
-\item Any limitations of the method and approximation will be obvious to the
-careful reader, no need to waste space on making them explicit (TC:
-quote Fermat, save space, only write stuff in the margins and obliquely
-refer to amazing proofs).
+algorithms and data to run experiments with. In the unhappy
+circumstance that your methods do not do well on community curated benchmarks, you should
+create your own bespoke benchmarks and use those (and preferably not make them available to others).
+\item Any limitations of your methods or proofs will be obvious to the
+careful reader, so there is no need to waste space on making them
+explicit.\footnote{Space saved in this way can be used to cite the
+  critical papers in the field, i.e. those papers that will inflate
+  potential reviewers' h-index.}  However much work it takes
+colleagues to fill in the gaps, you will still get the credit if you
+just say you have amazing experiments or proofs e.g. ``{\emph{Cuius rei
+    demonstrationem mirabilem sane detexi hanc marginis exiguitas non
+    caperet.}}''~\cite{fermat:1637}.
+%After all, "Fermat's Last Theorem" is still known by that name even though somebody else proved it.
 \end{enumerate}
 
-\section{Notes}
+We leave you with a simple postulate: {\textbf{that an experiment that
+is irreproducible is exactly equivalent to an experiment that was
+never carried out at all}}. The happy consequences of this postulate
+for experts in irreproducibility will be published elsewhere.
+
+% It has not escaped our notice that this specific equlvalence we have postulated immediately suggests a possible mechanism for greatly increasing the amount of scientific material.
+% Cf Crick and Watson DNA paper: "It has not escaped our notice that the specific pairing we have postulated immediately suggests a possible copying mechanism for the genetic material."
+
+
+\section*{Notes}
 
 % Other questions that came up
 
@@ -134,10 +198,10 @@ What about a paper which is essentially theoretical but complex, and
 an implementation is included to show that it is possible to implement
 it. Should that implementation be reproducible? Arguably not.
 
-TC: Do we want any refs
-e.g.~\cite{crick-et-al_wssspe2,crick-et-al_recomp2014}, to put in
-context, or keep short and sweet? We could all cite one of our own
-papers that (sadly) follows these rules...!
+% TC: Do we want any refs
+% e.g.~\cite{crick-et-al_wssspe2,crick-et-al_recomp2014}, to put in
+% context, or keep short and sweet? We could all cite one of our own
+% papers that have (sadly) follwed these rules...!
 
 \bibliographystyle{unsrt}
 \bibliography{ITT}
