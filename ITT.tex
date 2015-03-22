@@ -7,23 +7,23 @@
 
 \title{How to Make Your Research Irreproducible}
 
-% add names here! alphabetical?
+% authors
 \author[1]{Tom Crick}
-\author[2]{Neil P. Chue Hong}
-\author[3]{Ian P. Gent}
+\author[2]{Ian P. Gent}
+\author[3]{Neil P. Chue Hong}
 \author[4]{Lars Kotthoff}
-% \author[2]{Person 3...}
+% institutions
 \affil[1]{Department of Computing \& Information Systems, Cardiff
-  Metropolitan University}
-  \affil[2]{Software Sustainability Institute, University of Edinburgh}
-  \affil[3]{School of Computer Science, University of St Andrews}
-\affil[4]{Insight Centre for Data Analytics, University College Cork}
-% \affil[3]{Org3}
+  Metropolitan University, UK}
+  \affil[2]{School of Computer Science, University of St Andrews, UK}
+  \affil[3]{Software Sustainability Institute, UK}
+\affil[4]{Insight Centre for Data Analytics, University College Cork,
+  Ireland}
+% emails
 \affil[1]{\protect\url{tcrick@cardiffmet.ac.uk}}
-\affil[2]{\protect\url{N.ChueHong@software.ac.uk}}
-\affil[3]{\protect\url{ian.gent@st-andrews.ac.uk}}
+\affil[2]{\protect\url{ian.gent@st-andrews.ac.uk}}
+\affil[3]{\protect\url{N.ChueHong@software.ac.uk}}
 \affil[4]{\protect\url{lars.kotthoff@insight-centre.org}}
-% \affil[3]{\protect\url{email3}}
 
 \renewcommand\Authands{ and }
 \def\UrlBreaks{\do\/\do-}
@@ -37,191 +37,243 @@
 % General idea
 % Come up with a paper on Irreproducibility Top Tips
 % Use specific personal examples from the authors to back each tip up
-\begin{abstract}
-Guidelines and top tips for doing irreproducible research.
-\end{abstract}
+% \begin{abstract}
+% Some top tips for doing irreproducible research.
+% \end{abstract}
 
-\section{Workshop List}
+% from Recomputability 2014 workshop
+% \section{Workshop List}
 % This is the list we came up with at the workshop
+% \begin{enumerate}
+% \item implement everything yourself / don't reuse existing, well tested code wherever possible
+% \item  don't share anything
+% \ don't make it clear what irreproducibility means in your context / domain
+% \item don't make it clear where your method / approximations cannot be / should not be used
+% \item don't publish your source code, or your implementation
+% \item  define custom benchmarks
+% \item  don't describe your experimental setup
+% \item  give a vague methodology
+% \item  data formats are boring
+% \item  use magic numbers everywhere
+% \item  miss out key parts / fudgy workflow
+% \item  don't share the raw data you used to build everything
+% \item  define your own data formats, preferably in binary, mont human or machine readable
+% \item don't use source code control software for either code or document source like latex
+% % IPG can think of two examples where we lost paper latex files and definitely/probably lost journal papers as result.
+% \item it's only necessary that your code build and run on one physical computer on one date in history. 
+% \end{enumerate}
+
+% also from Recomputability 2014
+% \section{Lars distillation}
+% Need to distil those down to probably not more than 5 points -- here's Lars'
+% attempt:
+% \begin{enumerate}
+% \item Pseudo-code is a great way of communicating ideas quickly and clearly.
+% \item Don't share your implementation, you only make it easier for other people
+% to scoop your ideas.
+% \item People are interested in the science, not the experimental setup, so don't
+% describe it.
+% \item You're \emph{the} expert in the domain, only you can define what
+% algorithms and data to run experiments with. (TC: Thus, you should
+% create your own benchmarks and use those)
+% \item Any limitations of the method and approximation will be obvious to the
+% careful reader, no need to waste space on making them explicit (TC:
+% quote Fermat, save space, only write stuff in the margins and obliquely
+% refer to amazing proofs).
+% \end{enumerate}
+
+%\section{Ian's attempt at an April Fools' version}
+% We have noticed a number of guides being published on how to make
+% research reproducible. However, we have seen very little published on
+% how to make research \emph{irreproducible}.  Irreproducibility is the
+% default setting for all of science, and irreproducible research is
+% particularly common in computational science.  The study of making
+% your work irreproducible without reviewers complaining is a much
+% neglected area. We feel therefore that by giving our top tips on
+% irreproducibility, we will be filling a much needed gap in the
+% literature.  %\footnote{Filling a much needed gap is a standard joke.}
+% By following our tips you can ensure that if you work is wrong, nobody
+% can find it out, while if it's right you will make everyone else do
+% significantly more work than you to build on it. In either case you
+% are the beneficiary.
+
+% Our most vital tip is deceptively but beautifully simple. To ensure
+% irreproducibility of your work, make sure that you cannot reproduce it
+% yourself. If you were able to reproduce it, there would always be the
+% danger of somebody else being able to do exactly the same as you. Much
+% else follows from this. For example, complete confidence in your own
+% inability to reproduce work saves tedious time revising your work on
+% advice from reviewers: if you can't browbeat the editor into accepting
+% it as is, you can resubmit elsewhere. A major advantage of this key
+% insight is that no strict discipline is required to ensure
+% self-irreproducibility: in our experience, irreproducibility can
+% happily occur after only the tiniest amount of carelessness is
+% necessary at one of any number of stages.
+
+% There is an unfortunate convention in science that research should
+% pretend to be reproducible. The remainder of our top tips will help
+% you salve the conscience of reviewers still bound by this fussy
+% conventionality, enabling them to enthusiastically recommend
+% acceptance of your irreproducible work.
+
+% \begin{enumerate}
+% \item Pseudo-code is a great way of communicating ideas quickly and
+% clearly while giving readers no chance to understand the subtle
+% implementation details that make it work.
+% \item Don't share your implementation. Doing so only makes it easier
+% for other people to scoop your ideas, understand why your code
+% actually works instead of why you say it does, or worst of all to
+% understand that your code doesn't work at all.
+% \item People are interested in the science, not the experimental
+% setup, so don't describe it.  If necessary, camouflage this absence
+% with brief details of insignificant aspects of your methodology.
+% \item You're \emph{the} expert in the domain, only you can define what
+% algorithms and data to run experiments with. In the unhappy
+% circumstance that your methods do not do well on standard benchmarks,
+% you should create your own benchmarks and use those but preferably not
+% make them available to others.
+% \item Any limitations of your methods or proofs will be obvious to the
+% careful reader, so there is no need to waste space on making them
+% explicit.\footnote{Space saved in this way can be used to cite the
+% critical papers in the field, i.e. those papers that will increment
+% potential reviewers' h-index.}  However much work it takes colleagues
+% to fill in the gaps, you will still get the credit if you just say you
+% have amazing experiments or proofs.  After all, "Fermat's Last
+% Theorem" is still known by that name even though somebody else proved
+% it.
+% \end{enumerate}
+
+% We leave you with a simple postulate: that an experiment that is
+% irreproducible is exactly equivalent to an experiment that was never
+% carried out at all. The happy consequences of this postulate for
+% experts in irreproducibility will be published elsewhere.
+
+% It has not escaped our notice that this specific equivalence we have postulated immediately suggests a possible mechanism for greatly increasing the amount of scientific material.
+% cf. Crick and Watson DNA paper: "It has not escaped our notice that the specific pairing we have postulated immediately suggests a possible copying mechanism for the genetic material."
+
+
+
+% TC's attempt at an April Fool's version
+We have noticed (and contributed to) a number of manifestos, guides
+and top tips on how to make research
+reproducible~\cite{prlic+procter:2012,sandve-et-al:2013,gent:2013,wilson-et-al:2014,goble:2014,crick-et-al_wssspe2,crick-et-al_recomp2014,stodden+miguez:2014};
+however, we have seen very little published on how to make research
+\emph{irreproducible}.
+
+Irreproducibility is the default setting for all of science, and
+irreproducible research is particularly common across the
+computational sciences. The study of making your work irreproducible
+without reviewers complaining is a much neglected area; we feel
+therefore that by encapsulating our top tips\footnote{{\emph{N.B.}} We
+are by no means claiming this is an exhaustive list for making your
+research irreproducible...} on irreproducibility, we will be filling a
+much-needed gap in the domain literature. By following our tips, you
+can ensure that if you work is wrong, nobody will be able to check it;
+if it is correct, you can make everyone else do disproportionately
+more work than you to build upon it. In either case you are the
+beneficiary.
+
+It is an unfortunate convention of science that research should
+pretend to be reproducible; our top tips will help you salve the
+conscience of reviewers still bound by this fussy conventionality,
+enabling them to enthusiastically recommend acceptance of your
+irreproducible work.
+
 \begin{enumerate}
-\item implement everything yourself / don't reuse existing, well tested code wherever possible
-\item  don't share anything
-\ don't make it clear what irreproducibility means in your context / domain
-\item don't make it clear where your method / approximations cannot be / should not be used
-\item don't publish your source code, or your implementation
-\item  define custom benchmarks
-\item  don't describe your experimental setup
-\item  give a vague methodology
-\item  data formats are boring
-\item  use magic numbers everywhere
-\item  miss out key parts / fudgy workflow
-\item  don't share the raw data you used to build everything
-\item  define your own data formats, preferably in binary, mont human or machine readable
-\item don't use source code control software for either code or document source like latex
-% IPG can think of two examples where we lost paper latex files and definitely/probably lost journal papers as result.
-\item it's only necessary that your code build and run on one physical computer on one date in history. 
+\item {\textbf{Think ``Big Picture''.}} People are interested in the
+science, not the experimental setup, so don't describe it. If
+necessary, camouflage this absence with brief, high-level details of
+insignificant aspects of your methodology.
+\item {\textbf{Stay high-level.}} Pseudo-code is a great way of
+communicating ideas quickly and clearly while giving readers no chance
+to understand the subtle implementation details that actually make it
+work.
+\item {\textbf{Short and sweet.}} Any limitations of your
+methods or proofs will be obvious to the careful reader, so there is
+no need to waste space on making them explicit\footnote{Space saved in
+this way can be used to cite the critical papers in the field,
+i.e. those papers that will inflate your own (as well as potential
+reviewers') h-index.}. However much work it takes colleagues to fill
+in the gaps, you will still get the credit if you just say you have
+amazing experiments or proofs (with a hat-tip to Pierre de Fermat:
+``{\emph{Cuius rei demonstrationem mirabilem sane detexi hanc marginis
+exiguitas non caperet.}}'').
+\item {\textbf{The deficit model.}} You're \emph{the} expert in the
+domain, only you can define what algorithms and data to run
+experiments with. In the unhappy circumstance that your methods do not
+do well on community curated benchmarks, you should create your own
+bespoke benchmarks and use those (and preferably not make them
+available to others).
+\item {\textbf{Don't share.}} Doing so only makes it easier for other
+people to scoop your research ideas, understand how your code actually
+works\footnote{An exemplary example:
+\url{http://www.phdcomics.com/comics.php?f=1689}} instead of why you
+say it does, or worst of all to understand that your code doesn't work
+at all.
 \end{enumerate}
 
-\section{Lars distillation}
-Need to distil those down to probably not more than 5 points -- here's Lars'
-attempt:
-\begin{enumerate}
-\item Pseudo-code is a great way of communicating ideas quickly and clearly.
-\item Don't share your implementation, you only make it easier for other people
-to scoop your ideas.
-\item People are interested in the science, not the experimental setup, so don't
-describe it.
-\item You're \emph{the} expert in the domain, only you can define what
-algorithms and data to run experiments with. (TC: Thus, you should
-create your own benchmarks and use those)
-\item Any limitations of the method and approximation will be obvious to the
-careful reader, no need to waste space on making them explicit (TC:
-quote Fermat, save space, only write stuff in the margins and obliquely
-refer to amazing proofs).
-\end{enumerate}
+However, our most important tip is deceptively but beautifully simple:
+to ensure irreproducibility of your work, make sure that you cannot
+reproduce it yourself. If you were able to reproduce it, there would
+always be the danger of somebody else being able to do exactly the
+same as you. Much else follows from this; for example, complete
+confidence in your own inability to reproduce work saves tedious time
+revising your work on advice from reviewers: if you are unable to
+browbeat the editor into accepting it as is, you can always resubmit
+elsewhere. A major advantage of this key insight is that no strict
+discipline is required to ensure self-irreproducibility: in our
+experience, irreproducibility can happily occur after only the tiniest
+amount of carelessness at one of any number of stages.
 
-\section{Ian's attempt at an April Fools' version}
-
-We have noticed a number of guides being published on how to make research reproducible. However, we have seen very little published on how to make research \emph{irreproducible}.  Irreproducibility is the default setting for all of science, and irreproducible research is particularly common in computational science.  The study of making your work irreproducible without reviewers complaining is a much neglected area. We feel therefore that by giving our top tips on irreproducibility, we will be filling a much needed gap in the literature.
-%\footnote{Filling a much needed gap is a standard joke.} 
-By following our tips you can ensure that if you work is wrong, nobody can find it out, while if it's right you will make everyone else do significantly more work than you to build on it. In either case you are the beneficiary.
-
-Our most vital tip is deceptively but beautifully simple. To ensure irreproducibility of your work, make sure that you cannot reproduce it yourself. If you were able to reproduce it, there would always be the danger of somebody else being able to do exactly the same as you. Much else follows from this. For example, complete confidence in your own inability to reproduce work saves tedious time revising your work on advice from reviewers: if you can't browbeat the editor into accepting it as is, you can resubmit elsewhere. A major advantage of this key insight is that no strict discipline is required to ensure self-irreproducibility: in our experience, irreproducibility can happily occur after only the tiniest amount of carelessness is necessary at one of any number of stages.
-
-There is an unfortunate convention in science that research should pretend to be reproducible. The remainder of our top tips will help you salve the conscience of reviewers still bound by this fussy conventionality, enabling them to enthusiastically recommend acceptance of your irreproducible work. 
-
-\begin{enumerate}
-\item Pseudo-code is a great way of communicating ideas quickly and clearly while giving readers no chance to understand the subtle implementation details that make it work. 
-\item Don't share your implementation. Doing so  only makes it easier for other people
-to scoop your ideas, understand why your code actually works instead of why you say it does, or worst of all to 
-understand that your code doesn't work at all. 
-\item People are interested in the science, not the experimental setup, so don't
-describe it.  If necessary, camouflage this absence with brief details of insignificant aspects of your methodology.
-\item You're \emph{the} expert in the domain, only you can define what
-algorithms and data to run experiments with. In the unhappy circumstance that your methods do not do well on standard benchmarks, you should
-create your own benchmarks and use those but preferably not make them available to others.
-\item Any limitations of your methods or proofs will be obvious to the
-careful reader, so there is no need to waste space on making them explicit.\footnote{Space saved in this way can be used to cite the critical papers in the field, i.e. those papers that will increment potential reviewers' h-index.}  However much work it takes colleagues to fill in the gaps, you will still get the credit if you just say you have amazing experiments or proofs. 
-After all, "Fermat's Last Theorem" is still known by that name even though somebody else proved it.
-\end{enumerate}
-
-We leave you with a simple postulate: that an experiment that is irreproducible is exactly equivalent to an experiment that was never carried out at all. The happy consequences of this postulate for experts in irreproducibility will be published elsewhere. 
-
-
-% It has not escaped our notice that this specific equlvalence we have postulated immediately suggests a possible mechanism for greatly increasing the amount of scientific material.
-% Cf Crick and Watson DNA paper: "It has not escaped our notice that the specific pairing we have postulated immediately suggests a possible copying mechanism for the genetic material."
-
-\section{Tom's attempt at a New Year version}
-
-We have noticed a number of manifestos, guides and top tips on how to
-make research
-reproducible~\cite{barnes:2010,morin-et-al:2012,sandve-et-al:2013,wilson-et-al:2014,crick-et-al_recomp2014}.
-However, we have seen very little published on how to make research
-\emph{irreproducible}.  Irreproducibility is the default setting for
-all of science, and irreproducible research is particularly common
-across the computational sciences.  The study of making your work
-irreproducible without reviewers complaining is a much neglected
-area. We feel therefore that by encapsulating our top tips on
-irreproducibility, we will be filling a much needed gap in the domain
-literature. By following our tips you can ensure that if you work is
-wrong, nobody can find it out; while if it's right you will make
-everyone else do disproportionately more work than you to build upon
-it. In either case you are the beneficiary. {\textbf{Let's make 2015
-the year of irreproducible research}}.
-
-Our most important tip is deceptively but beautifully simple. To ensure
-irreproducibility of your work, make sure that you cannot reproduce it
-yourself. If you were able to reproduce it, there would always be the
-danger of somebody else being able to do exactly the same as you. Much
-else follows from this. For example, complete confidence in your own
-inability to reproduce work saves tedious time revising your work on
-advice from reviewers: if you can't browbeat the editor into accepting
-it as is, you can always resubmit elsewhere. A major advantage of this key
-insight is that no strict discipline is required to ensure
-self-irreproducibility: in our experience, irreproducibility can
-happily occur after only the tiniest amount of carelessness is
-necessary at one of any number of stages.
-
-There is an unfortunate convention in science that research should
-pretend to be reproducible. The remainder of our top tips will help
-you salve the conscience of reviewers still bound by this fussy
-conventionality, enabling them to enthusiastically recommend
-acceptance of your irreproducible work.
-
-\begin{enumerate}
-\item Pseudo-code is a great way of communicating ideas quickly and clearly while giving readers no chance to understand the subtle implementation details that make it work. 
-\item Don't share your implementation. Doing so only makes it easier for other people
-to scoop your ideas, understand why your code actually works instead of why you say it does, or worst of all to 
-understand that your code doesn't work at all. 
-\item People are interested in the science, not the experimental setup, so don't
-describe it.  If necessary, camouflage this absence with brief, high-level details of insignificant aspects of your methodology.
-\item You're \emph{the} expert in the domain, only you can define what
-algorithms and data to run experiments with. In the unhappy
-circumstance that your methods do not do well on community curated benchmarks, you should
-create your own bespoke benchmarks and use those (and preferably not make them available to others).
-\item Any limitations of your methods or proofs will be obvious to the
-careful reader, so there is no need to waste space on making them
-explicit.\footnote{Space saved in this way can be used to cite the
-  critical papers in the field, i.e. those papers that will inflate
-  potential reviewers' h-index.}  However much work it takes
-colleagues to fill in the gaps, you will still get the credit if you
-just say you have amazing experiments or proofs e.g. ``{\emph{Cuius rei
-    demonstrationem mirabilem sane detexi hanc marginis exiguitas non
-    caperet.}}''~\cite{fermat:1637}.
-%After all, "Fermat's Last Theorem" is still known by that name even though somebody else proved it.
-\end{enumerate}
-
-We leave you with a simple postulate: {\textbf{that an experiment that
+We leave you with a simple postulate: {\emph{that an experiment that
 is irreproducible is exactly equivalent to an experiment that was
 never carried out at all}}. The happy consequences of this postulate
-for experts in irreproducibility will be published elsewhere.
+for experts in irreproducibility will be published elsewhere; let's
+keep science closed and make 2015 the year of irreproducible research!
 
-% It has not escaped our notice that this specific equlvalence we have postulated immediately suggests a possible mechanism for greatly increasing the amount of scientific material.
-% Cf Crick and Watson DNA paper: "It has not escaped our notice that the specific pairing we have postulated immediately suggests a possible copying mechanism for the genetic material."
 
-\section{David's stuff}
 
-\begin{itemize}
-	\item If you use tools that are accepted in the field, such as
-		simulation packages, fix bugs in them during the course of your
-		work. Assume that these are obvious errors in functionality and
-		could not possibly affect your results, so you should maintain a
-		hazy memory of what the bugs were and the fixes entailed.
+% \section{David's stuff}
 
-	\item Use poor experimental design, especially by not keeping
-		records of PRNG seeds and using few replications (preferably
-		one). This increases the potential uniqueness of your results.
-		This statistical tomfoolery may lead to prominent features in
-		any graphs you present, so either discuss them heavily or ignore
-		them entirely so they are left as a pregnant mystery to the
-		reader. This approach is illustrated by Wong, Evans, and
-		Kock~\cite{Wong2000a}.
+% \begin{itemize}
+% 	\item If you use tools that are accepted in the field, such as
+% 		simulation packages, fix bugs in them during the course of your
+% 		work. Assume that these are obvious errors in functionality and
+% 		could not possibly affect your results, so you should maintain a
+% 		hazy memory of what the bugs were and the fixes entailed.
 
-\end{itemize}
+% 	\item Use poor experimental design, especially by not keeping
+% 		records of PRNG seeds and using few replications (preferably
+% 		one). This increases the potential uniqueness of your results.
+% 		This statistical tomfoolery may lead to prominent features in
+% 		any graphs you present, so either discuss them heavily or ignore
+% 		them entirely so they are left as a pregnant mystery to the
+% 		reader. This approach is illustrated by Wong, Evans, and
+% 		Kock~\cite{Wong2000a}.
 
-\section*{Notes}
+% \end{itemize}
+
+% \section*{Notes}
 
 % Other questions that came up
 
-Are the trustable minimal information for recomputability  different or overlapping for different domains?
-\begin{itemize}
-\item in AI alone very different
-\item require publishing of algorithm and implementation
-\item what stepping of the memory controller in systems domain
-\end{itemize}
+% Are the trustable minimal information for recomputability  different or overlapping for different domains?
+% \begin{itemize}
+% \item in AI alone very different
+% \item require publishing of algorithm and implementation
+% \item what stepping of the memory controller in systems domain
+% \end{itemize}
 
-Is there a Dublin Core - or a set of principles - that we can agree
-for recomputability?
+% Is there a Dublin Core - or a set of principles - that we can agree
+% for recomputability?
 
-What about a paper which is essentially theoretical but complex, and
-an implementation is included to show that it is possible to implement
-it. Should that implementation be reproducible? Arguably not.
+% What about a paper which is essentially theoretical but complex, and
+% an implementation is included to show that it is possible to implement
+% it. Should that implementation be reproducible? Arguably not.
 
-% TC: Do we want any refs
-% e.g.~\cite{crick-et-al_wssspe2,crick-et-al_recomp2014}, to put in
-% context, or keep short and sweet? We could all cite one of our own
-% papers that have (sadly) follwed these rules...!
 
+
+% bib
 \bibliographystyle{unsrt}
 \bibliography{ITT}
 
