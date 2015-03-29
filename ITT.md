@@ -18,7 +18,7 @@ enthusiastically recommend acceptance of your irreproducible work.
 
 
 > By following our tips, you
-can ensure that if you work is wrong, nobody will be able to check it;
+can ensure that if your work is wrong, nobody will be able to check it;
 if it is correct, you can make everyone else do disproportionately more
 work than you to build upon it. In either case you are the beneficiary.
 
