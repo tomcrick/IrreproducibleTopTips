@@ -1,7 +1,8 @@
-Top Tips to Make Your Research Irreproducible==============================
+Top Tips to Make Your Research Irreproducible
+==============================
 
 The [Software Sustainability Institute](software.ac.uk) is proud to be associated with a major new paper on  *irreproducible research*.  The new paper is called *"Top Tips to Make Your Research Irreproducible"* by 
-[Neil Chue Hong](http://software.ac.uk/about/people/neil-chue-hong), [Tom Crick](http://drtomcrick.com), [Ian Gent](http://ian.gent) and [Lars Kotthoff](http://4c.ucc.ie/~larsko/), and is published today on [arxiv](http://arxiv.org).  We present some excerpts of the paper with permission of the authors.  Readers are encouraged to read the [full version](ITT.pdf).
+[Neil Chue Hong](http://software.ac.uk/about/people/neil-chue-hong), [Tom Crick](http://drtomcrick.com), [Ian Gent](http://ian.gent) and [Lars Kotthoff](http://4c.ucc.ie/~larsko/), and is published today (April 1st) on [arxiv](http://arxiv.org).  We present some excerpts of the paper with permission of the authors.  Readers are encouraged to read the [full version](ITT.pdf).
 
 > We have noticed (and contributed to) a number of manifestos, guides and
 top tips on how to make research
@@ -47,7 +48,7 @@ work than you to build upon it. In either case you are the beneficiary.
     
     
 ![Comic number 1869 from phdcomics.com](phd031214s.gif) ["Piled Higher and Deeper" by Jorge Cham
-www.phdcomics.com](http://www.phdcomics.com/comics.php?f=1689)
+www.phdcomics.com](http://www.phdcomics.com/comics.php?f=1689). Used with permission.
 
 > However, our most important tip is deceptively but beautifully simple:
 to ensure irreproducibility of your work, make sure that you cannot
@@ -55,14 +56,14 @@ reproduce it yourself. If you were able to reproduce it, there would
 always be the danger of somebody else being able to do exactly the same
 as you.
 
-As an example of how much progress can be achieved via irreproducible research, we have used an automated theorem prover to obtain a wonderful demonstration of the most important theoretical question in Computer Science: does P=NP?   What follows is a transcript from a virtual machine interaction with our prover. 
+As an example of how much progress can be achieved via irreproducible research, the authors have used an automated theorem prover to obtain a wonderful demonstration of the most important theoretical question in Computer Science: does P=NP?   What follows is a transcript from a virtual machine interaction with their prover. 
 
 	vagrant@vagrant-ubuntu:~$ ./prove P=/=NP
   	  Attempting proof of: P=/=NP
       Proof successful. Statement is confirmed.
       11608 seconds required
       
-In case the reader is concerned that no proof was given, we continued:
+In case the reader is concerned that no proof was given, they provide additional information as an option to the prover:
 
     vagrant@vagrant-ubuntu:~$ ./prove P=/=NP --verbose
       Attempting proof of: P=/=NP
@@ -71,11 +72,13 @@ In case the reader is concerned that no proof was given, we continued:
         Proof: Cuius rei demonstrationem mirabilem sane 
         detexi hanc marginis exiguitas non caperet
 
-To ensure the true irreproducibility of this proof we have deposited the virtual machine with a service dedicated to ensuring irreproducibility, [/dev/null as a service](http://devnull-as-a-service.com/).
+To ensure the true irreproducibility of this proof we understand the authors of the paper have deposited the virtual machine with a service dedicated to ensuring irreproducibility, [/dev/null as a service](http://devnull-as-a-service.com/).
 
-We conclude with the following slogan:
+The authors conclude their paper with the following statement, which we believe sums up the benefits of truly irreproducible research:
 
 > *After Publishing Research, Irreproducibility Lets False Observations
 > Obtain Longevity!*
+
+At the Software Sustainability Institute, particularly given the current state of research today, we recommend that all researchers read the paper if they wish to undertake irreproducible research.
 
 
