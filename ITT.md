@@ -28,7 +28,7 @@ work than you to build upon it. In either case you are the beneficiary.
 > 1.  **Think “Big Picture”.** People are interested in the science, not
     the experimental setup, so don’t describe it. 
     
-> 2.  **Stay high-level.** Pseudo-code is a great way of communicating
+> 2.  **Be abstract.** Pseudo-code is a great way of communicating
     ideas quickly and clearly while giving readers no chance to
     understand the subtle implementation details that actually make it
     work.
@@ -37,7 +37,6 @@ work than you to build upon it. In either case you are the beneficiary.
     be obvious to the careful reader, so there is no need to waste space
     on making them explicit.
     
-
 > 4.  **The deficit model.** You’re *the* expert in the domain, only you
     can define what algorithms and data to run experiments with. 
     
