@@ -1,9 +1,9 @@
 \documentclass[a4paper,11pt]{article}
-\usepackage[top=2cm,bottom=2cm,left=2cm,right=2cm,asymmetric]{geometry}
+\usepackage[top=1.8cm,bottom=1.8cm,left=1.8cm,right=1.8cm,asymmetric]{geometry}
 \usepackage{url}
 \usepackage{paralist}
 \usepackage{authblk}
-\usepackage[colorlinks=true,hyperfootnotes=false]{hyperref}
+\usepackage[colorlinks=true,hyperfootnotes=true]{hyperref}
 
 \title{Top Tips to Make Your Research Irreproducible}
 
@@ -12,18 +12,19 @@
 \author[2]{Tom Crick}
 \author[3]{Ian P. Gent}
 \author[4]{Lars Kotthoff}
+\author[5]{Kenji Takeda}
 % institutions
 \affil[1]{Software Sustainability Institute, University of Edinburgh, UK}
-\affil[2]{Department of Computing \& Information Systems, Cardiff
-  Metropolitan University, UK}
+\affil[2]{Department of Computing \& Information Systems, Cardiff Metropolitan University, UK}
 \affil[3]{School of Computer Science, University of St Andrews, UK}
-\affil[4]{Insight Centre for Data Analytics, University College Cork,
-  Ireland}
+\affil[4]{Insight Centre for Data Analytics, University College Cork, Ireland}
+\affil[5]{Microsoft Research, Cambridge, UK}
 % emails
-\affil[1]{\url{http://www2.epcc.ed.ac.uk/\~neilc/} ~~~~  \protect\url{N.ChueHong@software.ac.uk}}
-\affil[2]{\url{http://drtomcrick.com/} ~~~~ \protect\url{tcrick@cardiffmet.ac.uk}}
-\affil[3]{\protect\url{http://ian.gent} ~~~~ \protect\url{ian.gent@st-andrews.ac.uk}}
-\affil[4]{\url{http://4c.ucc.ie/\~larsko/} ~~~~ \protect\url{lars.kotthoff@insight-centre.org}}
+\affil[1]{\url{n.chuehong@software.ac.uk} ~~~~ \protect\url{http://www2.epcc.ed.ac.uk/\~neilc/} }
+\affil[2]{\url{tcrick@cardiffmet.ac.uk} ~~~~ \protect\url{http://drtomcrick.com/}}
+\affil[3]{\url{ian.gent@st-andrews.ac.uk} ~~~~ \protect\url{http://ian.gent}}
+\affil[4]{\url{lars.kotthoff@insight-centre.org} ~~~~ \protect\url{http://4c.ucc.ie/\~larsko/}}
+\affil[5]{\url{kenji.takeda@microsoft.com} ~~~~ \protect\url{http://research.microsoft.com/en-us/people/kenjitak/}}
 
 \renewcommand\Authands{ and }
 \def\UrlBreaks{\do\/\do-}
@@ -156,7 +157,7 @@
 % TC's attempt at an April Fool's version
 We have noticed (and contributed to) a number of manifestos, guides
 and top tips on how to make research
-reproducible~\cite{prlic+procter:2012,sandve-et-al:2013,gent:2013,gent_recomputation.org_2014,wilson-et-al:2014,goble:2014,crick-et-al_wssspe2,crick-et-al_recomp2014,stodden+miguez:2014};
+reproducible~\cite{prlic+procter:2012,sandve-et-al:2013,gent:2013,joppa-et-al:2013,gent_recomputation.org_2014,wilson-et-al:2014,goble:2014,crick-et-al_wssspe2,crick-et-al_recomp2014,stodden+miguez:2014};
 however, we have seen very little published on how to make research
 \emph{irreproducible}.
 
@@ -164,20 +165,20 @@ Irreproducibility is the default setting for all of science, and
 irreproducible research is particularly common across the
 computational sciences. The study of making your work irreproducible
 without reviewers complaining is a much neglected area; we feel
-therefore that by encapsulating our top tips\footnote{{\emph{N.B.}} We
-are by no means claiming this is an exhaustive list for making your
-research irreproducible...} on irreproducibility, we will be filling a
-much-needed gap in the domain literature. By following our tips, you
-can ensure that if your work is wrong, nobody will be able to check it;
-if it is correct, you can make everyone else do disproportionately
-more work than you to build upon it. In either case you are the
-beneficiary.
+therefore that by encapsulating some of our top
+tips\footnote{{\emph{N.B.}} We are by no means claiming this is an
+exhaustive list for making your research irreproducible...} on
+irreproducibility, we will be filling a much-needed gap in the domain
+literature. By following our starter tips, you can ensure that if your
+work is wrong, nobody will be able to check it; if it is correct, you
+will make everyone else do disproportionately more work than you to
+build upon it. In either case you are the beneficiary.
 
 It is an unfortunate convention of science that research should
 pretend to be reproducible; our top tips will help you salve the
-conscience of reviewers still bound by this fussy conventionality,
-enabling them to enthusiastically recommend acceptance of your
-irreproducible work.
+conscience of certain reviewers still bound by this fussy
+conventionality, enabling them to enthusiastically recommend
+acceptance of your irreproducible work.
 
 \begin{enumerate}
 \item {\textbf{Think ``Big Picture''.}} People are interested in the
@@ -213,15 +214,15 @@ actually work at all.
 \end{enumerate}
 
 However, our most important tip is deceptively but beautifully simple:
-{\textbf{to ensure irreproducibility of your work, make sure that you cannot
-reproduce it yourself}}. If you were able to reproduce it, there would
-always be the danger of somebody else being able to do exactly the
-same as you. Much else follows from this; for example, complete
-confidence in your own inability to reproduce work saves tedious time
-revising your work on advice from reviewers: if you are unable to
-browbeat the editor into accepting it as is, you can always resubmit
-elsewhere. A major advantage of this key insight is that no strict
-discipline is required to ensure self-irreproducibility: in our
+{\textbf{to ensure your work is irreproducible, make sure that you
+cannot reproduce it yourself}}. If you were able to reproduce it,
+there would always be the danger of somebody else being able to do
+exactly the same as you. Much else follows from this; for example,
+complete confidence in your own inability to reproduce work saves
+tedious time revising your work on advice from reviewers: if you are
+unable to browbeat the editor into accepting it as is, you can always
+resubmit elsewhere. A major advantage of this key insight is that no
+strict discipline is required to ensure self-irreproducibility: in our
 experience, irreproducibility can happily occur after only the tiniest
 amount of carelessness at one of any number of stages.
 
